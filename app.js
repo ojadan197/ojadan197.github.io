@@ -1,3 +1,41 @@
+//----- Master Version
+// Creating Menu Tab Elements Here
+
+const tab = document.createElement("div");
+tab.classList.add("tab-container__colorized");
+// tab.append("Hello World")
+
+const tab_1  =  document.createElement("div");
+tab_1.classList.add("tab-container__colorized");
+tab_1.append("About \n Me");
+tab_1.id = 'tab_1';
+
+const tab_2  = document.createElement("div");
+tab_2.classList.add("tab-container__colorized");
+tab_2.append("Future Goals");
+tab_2.id = 'tab_2';
+
+const tab_3  = document.createElement("div");
+tab_3.classList.add("tab-container__colorized");
+tab_3.append("Past Experience");
+tab_3.id = 'tab_3';
+
+const tab_4  = document.createElement("div");
+tab_4.classList.add("tab-container__colorized");
+tab_4.append("Katas and Treasures");
+tab_4.id = 'tab_4';
+
+const tab_5  = document.createElement("div");
+tab_5.classList.add("tab-container__colorized");
+tab_5.append("Sample Projects");
+tab_5.id = 'tab_5';
+
+const tab_6 = document.createElement("div");
+tab_6.classList.add("tab-container__colorized__result");
+tab_6.id = 'tab_6';
+
+
+
 populate_tabs();
 
   tab_1.onclick = clickTab1;
@@ -55,40 +93,7 @@ function popTab6 () {
 
 // -------------- Master Version
 
-// Creating Menu Tab Elements Here
 
-const tab = document.createElement("div");
-tab.classList.add("tab-container__colorized");
-// tab.append("Hello World")
-
-const tab_1  =  document.createElement("div");
-tab_1.classList.add("tab-container__colorized");
-tab_1.append("About \n Me");
-tab_1.id = 'tab_1';
-
-const tab_2  = document.createElement("div");
-tab_2.classList.add("tab-container__colorized");
-tab_2.append("Future Goals");
-tab_2.id = 'tab_2';
-
-const tab_3  = document.createElement("div");
-tab_3.classList.add("tab-container__colorized");
-tab_3.append("Past Experience");
-tab_3.id = 'tab_3';
-
-const tab_4  = document.createElement("div");
-tab_4.classList.add("tab-container__colorized");
-tab_4.append("Katas and Treasures");
-tab_4.id = 'tab_4';
-
-const tab_5  = document.createElement("div");
-tab_5.classList.add("tab-container__colorized");
-tab_5.append("Sample Projects");
-tab_5.id = 'tab_5';
-
-const tab_6 = document.createElement("div");
-tab_6.classList.add("tab-container__colorized__result");
-tab_6.id = 'tab_6';
 
 
 
