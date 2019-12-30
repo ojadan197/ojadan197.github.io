@@ -4,6 +4,7 @@
     font-family: 'Solway', serif;
 }
 
+
 .bottom {
     text-align: center;
     color: black;
@@ -14,11 +15,6 @@
 .classy {
   justify-content: center;
   background-image: url("images/plant.jpg");
-  /* background: linear-gradient(to bottom left, #a6ff00 0%, #00cc4e 62%); */
-  /* background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 1wv 1vh;
-  background-size: cover, contain; */
   color: rgb(200, 186, 186);
 }
 
@@ -27,10 +23,25 @@
     justify-content: center;
     text-align: center;
 }
-/* 
-.spacer {
-    margin
-} */
+
+
+.my_image {
+    max-width: 250px;
+    max-height: 250px;
+    float: right;
+}
+.image {
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+
+.red_bold {
+    color: rgb(214, 43, 43);
+}
+.red_bold:hover {
+    color: rgb(0, 146, 0);
+}
 
 
 .tab-area {
@@ -77,6 +88,7 @@
 .tab-container__colorized__result {
     padding: 2%;
     width: 90%;
+    max-width: 1400px;
     height: 100%;
     margin: auto;
     justify-content: center;
