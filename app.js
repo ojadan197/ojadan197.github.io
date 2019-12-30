@@ -116,15 +116,18 @@ function populate_tabs() {
     const paragraph = [];
     
     // Determine the number of paragraphs in this section here
-    for (i = 0; i <3; i++){
+    for (i = 0; i <7; i++){
       paragraph[i] = document.createElement('p');
     }
 
     // Mannually Populate Paragraph content here...
-    paragraph[0].append(`This Paragraph 1 of the About Me section, currently under construction`)
-    paragraph[1].append('Paragraph 2 is way better than paragraph 1 I could repeat it twice')
-    paragraph[2].append('But Paragraph 3 is the best parargraph of all!!!!!!!')
-    
+    paragraph[0].append(`Hi there, thanks for visiting my page!`);
+    paragraph[1].append(`I’m Omar, and I’d love to tell you about myself! I’m a trilingual CrossFit junkie who’s addicted to reading 19th and early 20th century literature! Ok, let me slow down…`);
+    paragraph[2].append(`I am a fluent speaker of both Arabic and English, ¡y estoy disfrutando mucho aprender y practicar español! Voy a muchos Meetups para converser más con hablantes nativos de español, ¡y quiero quedarme unos meses en Ciudad de México un día, y visitar Colombia y España tambien!`);
+    paragraph[3].append(`Yes, I have also been referred to as a “fitness freak” and a “health nerd,” but haters gonna hate #amirite? Aside from CrossFit, I also participate in weekly soccer meetups, and will soon be learning either Jiu Jitsu or Muay Thai, so don’t be surprised if I show up limping and bruised when you and I meet! `);
+    paragraph[4].append(`I worked for almost 5½ years in Financial Compliance and Anti-Money Laundering Investigations (AML), but decided to make a career switch to become the one of the best Software Developers out there! I enrolled into the JavaScript Full Stack Software Engineering program at We Can Code IT in Columbus, OH and I’m excited to be on this journey!`);
+    paragraph[5].append(`My portfolio is a mobile-friendly Full Stack Single-Page Application, so don’t hesitate to click around! The code is available for everyone to check out on my GitHub page as well!`);
+    paragraph[6].append(`Click anywhere in this box to go back to the main menu.`)
     // Append paragraphs to container here.
     for (i in paragraph) {
       AboutMe.append(paragraph[i]);  
