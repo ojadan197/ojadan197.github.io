@@ -32,6 +32,11 @@ const tab_6 = document.createElement("div");
 tab_6.classList.add("tab-container__colorized__result");
 tab_6.id = 'tab_6';
 
+let message_p = `Main Menu`;
+document.getElementById("display_message").innerHTML = `${message_p}`;
+
+let go_back = ``;
+document.getElementById("go_back").innerHTML = `${go_back}`;
 
 // Environment Manipulation Here
 
@@ -48,30 +53,50 @@ tab_6.onclick = clickTab6;
 
 function clickTab1 () {
   console.log("tab 1 clicked");
+  message_p = `About Me`;
+  document.getElementById("display_message").innerHTML = `${message_p}`;
+  // go_back = `Click the Glowbox to Return Home`;
+  document.getElementById("go_back").innerHTML = `${go_back}`;
   popTab6();
   tab_6.append(content_1());
 }
 
 function clickTab2 () {
   console.log("tab 2 clicked");
+  message_p = `Future Goals`;
+  document.getElementById("display_message").innerHTML = `${message_p}`;
+  // go_back = `Click the Glowbox to Return Home`;
+  document.getElementById("go_back").innerHTML = `${go_back}`;
   popTab6();
   tab_6.append(content_2());
 }
 
 function clickTab3 () {
   console.log("tab 3 clicked");
+  message_p = `Past Experience`;
+  document.getElementById("display_message").innerHTML = `${message_p}`;
+  // go_back = `Click the Glowbox to Return Home`;
+  document.getElementById("go_back").innerHTML = `${go_back}`;
   popTab6();
   tab_6.append(content_3());
 }
 
 function clickTab4 () {
   console.log("tab 4 clicked");
+  message_p = `Katas and Treasures`;
+  document.getElementById("display_message").innerHTML = `${message_p}`;
+  // go_back = `Click the Glowbox to Return Home`;
+  document.getElementById("go_back").innerHTML = `${go_back}`;
   popTab6();
   tab_6.append(content_4());
 }
 
 function clickTab5 () {
   console.log("tab 5 clicked");
+  message_p = `Past Projects`;
+  document.getElementById("display_message").innerHTML = `${message_p}`;
+  // go_back = `Click the Glowbox to Return Home`;
+  document.getElementById("go_back").innerHTML = `${go_back}`;
   popTab6();
   tab_6.append(content_5());
 }
@@ -79,6 +104,10 @@ function clickTab5 () {
 function clickTab6 () {
   document.getElementById("tab_6").innerHTML = "";
   document.getElementById("menu_tabs").innerHTML = "";
+  message_p = `Main Menu`;
+  document.getElementById("display_message").innerHTML = `${message_p}`;
+  go_back = ``;
+  document.getElementById("go_back").innerHTML = `${go_back}`;
   populate_tabs();
     
 }
@@ -117,6 +146,7 @@ function populate_tabs() {
     const paragraph = [];
     const italics = [];
     const myImage = document.createElement('img');
+    const h3 = document.createElement('h3');
     myImage.classList.add('my_image');
     myImage.setAttribute("src", "css/images/Omar2.png");
     
@@ -130,7 +160,8 @@ function populate_tabs() {
     }
 
     // Mannually Populate Paragraph content here...
-    paragraph[0].append(`Hi there, thanks for visiting my page!`);
+    h3.append(`Hi there, thanks for visiting my page!`);
+    paragraph[0].append(h3);
     paragraph[1].append(`I’m Omar, and I’d love to tell you about myself! I’m a trilingual CrossFit junkie who’s addicted to reading 19th and early 20th century literature! Ok, let me slow down…`);
     paragraph[2].append(`I am a fluent speaker of both Arabic and English, `);
     italics[0].append(`¡y estoy disfrutando mucho aprender y practicar español! Voy a muchos Meetups para converser más con hablantes nativos de español, ¡y quiero quedarme unos meses en Ciudad de México un día, y visitar Colombia y España tambien!`);
@@ -245,19 +276,19 @@ function populate_tabs() {
     const li = [];
 
     // Creating objects to hold positions  here
-    for (i = 0; i <9; i++){
+    for (i = 0; i <14; i++){
       position[i] = document.createElement('div');
       bold[i] = document.createElement('b');
       underline[i] = document.createElement('u');
       bold_underline[i] = document.createElement('a');
       bold_underline[i].append(bold[i]);
-      bold_underline[i].append(underline[i]);
+      
       italics[i] = document.createElement('i');
       h3[i] = document.createElement('h3');
       ul[i] = document.createElement('ul');
     }
     
-    for (i = 0; i <15; i++){
+    for (i = 0; i <37; i++){
       li[i] = document.createElement('li');
     }
     
@@ -271,7 +302,7 @@ function populate_tabs() {
     h3[0].append(italics[0]);
     h3[0].append(`(September 2019—December 2019)`);
     li[0].append(`Successfully graduated from a five-star Software Engineering boot camp after learning front-end and back-end JavaScript, HTML, CSS and other tools.`);
-    li[1].append(`Learned to operate under SCRUM and AGILE environments while utilizing project planning techniques such as Kanban Boards to meet code review deadlines.`);
+    li[1].append(`Operated under SCRUM and AGILE environments while utilizing project planning techniques such as Kanban Boards to meet code review deadlines.`);
     ul[0].append(li[0]);
     ul[0].append(li[1]);
     position[0].append(h3[0]);
@@ -284,10 +315,14 @@ function populate_tabs() {
     h3[1].append(bold_underline[1]);
     h3[1].append(italics[1]);
     h3[1].append(`(April 2019—August 2019)`);
-    li[2].append(`At Worldpay, I consulted primarily in reviewing and rewriting policies and procedures for Regulatory compliance. `);
-    li[3].append(`Additionally, I advised and assisted in the tuning of Transaction Monitoring and Surveillance to ensure compliance from a BSA/USA PATRIOT Act perspective.`);
+    li[2].append(`Reviewed, drafted and escalated for approval policies and procedures pertaining to Regulatory Compliance process. `);
+    li[3].append(`Connected with internal stakeholders to uncover undocumented internal processes and policies, and drafted Level 2 and Level 3 documentation which express the missing processes and policy in detail.`);
+    li[4].append(`Communicated with project managers, team leads and senior analysts in order to draft a handbook intended as introductory training material for new hires within the Regulatory Compliance space.`);
+    li[5].append(`Received and resolved outstanding internal audit issues pertaining to Regulatory Compliance, including the re-examination and update of AML transaction monitoring rules; drafting new KYC and CDD policy-related issues, as well as an update of the beneficial owner policy per new FinCEN rules.`);
     ul[1].append(li[2]);
     ul[1].append(li[3]);
+    ul[1].append(li[4]);
+    ul[1].append(li[5]);
     position[1].append(h3[1]);
     position[1].append(ul[1]);
 
@@ -298,10 +333,17 @@ function populate_tabs() {
     h3[2].append(bold_underline[2]);
     h3[2].append(italics[2]);
     h3[2].append(`(April 2018 — September 2018)`);
-    li[4].append(`At Valley National Bank, I was brought on board to help resolve 36 outstanding AML cases before the OCC deadline of May 1st 2019. By the time OCC auditors were on site, the cases were complete.`);
-    li[5].append(`After addressing the OCC deadline, I led a team of 5 temporary consultants in fine-tuning Actimize detection scenarios; while continuing to address AML alerts and cases.`);
-    ul[2].append(li[4]);
-    ul[2].append(li[5]);
+    li[6].append(`Led and streamlined AML reconciliation project by communicating with management, understanding requirements, identifying targets and deadlines, and acting to accomplish defined goals and objectives by said timeline.`);
+    li[7].append(`Disseminated regular project updates to management explaining progress status while ensuring that analysts met expected goals and deadlines.`);
+    li[8].append(`Assisted in the implementation and fine-tuning of Actimize to ensure functional operation and smooth transfer to full-time staff.`);
+    li[9].append(`Trained and mentored analysts during the conversion and implementation of Actimize as Bank’s new system of AML risk management in replacement of SAS.`);
+    li[10].append(`Assigned caseload to analysts, performed quality reviews to ensure timely and accurate completion of reviews.`);
+    // li[11].append();
+    ul[2].append(li[6]);
+    ul[2].append(li[7]);
+    ul[2].append(li[8]);
+    ul[2].append(li[9]);
+    ul[2].append(li[10]);
     position[2].append(h3[2]);
     position[2].append(ul[2]);
 
@@ -312,10 +354,18 @@ function populate_tabs() {
     h3[3].append(bold_underline[3]);
     h3[3].append(italics[3]);
     h3[3].append(`(May 2016 — January 31st, 2018)`);
-    li[6].append(`At SCB, I performed QA audit, sampling, and review functions for AML cases which have been completed and submitted.`);
-    li[7].append(`The QA function encompassed SARs, CARs, Clear & Closed cases, KYC reviews, OFAC reviews, primarily in the correspondent banking sphere.`);
-    ul[3].append(li[6]);
-    ul[3].append(li[7]);
+    li[11].append(`Performed periodic testing on a wide variety of AML/KYC case types to assure that protocols and were followed and that EDD was conducted accurately.`);
+    li[12].append(`The QA function encompassed SARs, CARs, Clear & Closed cases, KYC reviews, OFAC reviews, primarily in the correspondent banking sphere.`);
+    li[13].append(`Performed quality test to ensure that customer EDD was accurately and securely retained.`);
+    li[14].append(`Examined KYC and EDD processes to ensure compliance with guidelines.`);
+    li[15].append(`Performed step-by-step audits of sampled AML cases and SARs to ensure compliance with procedures, as well as AML/BSA, OFAC, and FinCEN regulations.`);
+    li[16].append(`Substituted as a team-lead of 6 analysts during a transitional period and served as point-of-contact with management to ensure that workflow and feedback were delivered efficiently.`);
+    ul[3].append(li[11]);
+    ul[3].append(li[12]);
+    ul[3].append(li[13]);
+    ul[3].append(li[14]);
+    ul[3].append(li[15]);
+    ul[3].append(li[16]);
     position[3].append(h3[3]);
     position[3].append(ul[3]);
 
@@ -326,10 +376,14 @@ function populate_tabs() {
     h3[4].append(bold_underline[4]);
     h3[4].append(italics[4]);
     h3[4].append(`(October 2015 — May 2016)`);
-    li[8].append(`Investigated and monitored high-risk customers with low-transparency accounts, such as prepaid, temporary, or disposable card accounts.`);
-    li[9].append(`Analyzed risk levels and conducted KYC/EDD reviews in preparation for potential suspicious activity escalation.`);
-    ul[4].append(li[8]);
-    ul[4].append(li[9]);
+    li[17].append(`Investigated and monitored high-risk customers with low-transparency accounts, such as prepaid, temporary, or disposable card accounts.`);
+    li[18].append(`Analyzed risk levels and conducted KYC/EDD reviews in preparation for potential suspicious activity escalation.`);
+    li[19].append(`Conducted extensive KYC and EDD on customers with minimal information on record.`);
+    li[20].append(`Demonstrated an in-depth understanding of EDD risks across all business units through application of knowledge based analysis and decision making.`);
+    ul[4].append(li[17]);
+    ul[4].append(li[18]);
+    ul[4].append(li[19]);
+    ul[4].append(li[20]);
     position[4].append(h3[4]);
     position[4].append(ul[4]);
 
@@ -340,10 +394,12 @@ function populate_tabs() {
     h3[5].append(bold_underline[5]);
     h3[5].append(italics[5]);
     h3[5].append(` (April 2015 — September 2015)`);
-    li[10].append(`Documented and verified complete SARs investigations and narratives in accordance with strict regulatory requirements and deadlines.`);
-    li[11].append(`Collaborated with Management to build AML, KYC, and EDD recordkeeping procedures while responding with feedback to patch defects.`);
-    ul[5].append(li[10]);
-    ul[5].append(li[11]);
+    li[21].append(`Documented and verified complete SARs investigations and narratives in accordance with strict regulatory requirements and deadlines.`);
+    li[22].append(`Collaborated with Management to build AML, KYC, and EDD recordkeeping procedures while responding with feedback to patch defects.`);
+    li[23].append(`Conducted Enhanced Due Diligence (EDD) and OFAC checks by independently researching high-risk customer’s using tools such as World Check/CLEAR and Lexis Nexis.`)
+    ul[5].append(li[21]);
+    ul[5].append(li[22]);
+    ul[5].append(li[23]);
     position[5].append(h3[5]);
     position[5].append(ul[5]);
 
@@ -354,14 +410,53 @@ function populate_tabs() {
     h3[6].append(bold_underline[6]);
     h3[6].append(italics[6]);
     h3[6].append(` (February 2014 — April 2015)`);
-    li[12].append(`Conducted AML investigations in accordance with BSA and USA PATRIOT Act to assess risk across various LOBs with timely submission of SARs to FinCEN.`);
-    li[13].append(`Trained incoming AML Investigators in risk assessment, AML typologies, investigative procedure, and OFAC standards.`);
-    li[14].append(`Developed a strong understanding of AML typologies, such as Trade-Based Money Laundering, Grey Market Exports, and Currency Reporting Evasion Typologies.`);
-    ul[6].append(li[12]);
-    ul[6].append(li[13]);
-    ul[6].append(li[14]);
+    li[24].append(`Conducted AML investigations in accordance with BSA and USA PATRIOT Act to assess risk across various LOBs with timely submission of SARs to FinCEN.`);
+    li[25].append(`Trained incoming AML Investigators in risk assessment, AML typologies, investigative procedure, and OFAC standards.`);
+    li[26].append(`Developed a strong understanding of AML typologies, such as Trade-Based Money Laundering, Grey Market Exports, and Currency Reporting Evasion Typologies.`);
+    li[27].append(`Defined and implemented procedural controls to enhance SAR quality.`);
+    li[28].append(`Conducted KYC/EDD case remediations to ensure accurate retention of customer information.`);
+    ul[6].append(li[24]);
+    ul[6].append(li[25]);
+    ul[6].append(li[26]);
+    ul[6].append(li[27]);
+    ul[6].append(li[28]);
     position[6].append(h3[6]);
     position[6].append(ul[6]);
+
+    //Earlier Experience
+    underline[7].append(`Earlier Experience:`);
+    bold_underline[7].append(underline[7]);
+    italics[7].append(` Various Post-College Internships and Roles `);
+    h3[7].append(bold_underline[7]);
+    h3[7].append(italics[7]);
+    h3[7].append(` (January 2012 — December 2013)`);
+    li[29].append(`Alliance Data: Enterprise Risk Consultant (Oct 2013—Dec 2013)`);
+    li[30].append(`Huntington Bank: Commercial Credit Analyst—Intern (Aug 2012—May 2013)`);
+    li[31].append(`The Citizens League of Greater Cleveland: Accounting Internship (Jan 2012—Dec 2013)`);
+    li[32].append(`Nelligan Sports Marketing: Customer Relations Intern (Jan 2012—May 2012)`);
+    ul[7].append(li[29]);
+    ul[7].append(li[30]);
+    ul[7].append(li[31]);
+    ul[7].append(li[32]);
+    position[7].append(h3[7]);
+    position[7].append(ul[7]);
+
+    //Education
+    underline[8].append(`Education:`);
+    bold_underline[8].append(underline[8]);
+    // italics[7].append(` Various Post-College Internships and Roles `);
+    h3[8].append(bold_underline[8]);
+    h3[8].append(italics[8]);
+    // h3[7].append(` (January 2012 — December 2013)`);
+    li[33].append(`We Can Code IT: Certificate of Software Engineering - Columbus, OH (Graduated: December 2019)`);
+    li[34].append(`Cleveland State University Master’s Degree (MBA, Finance) Cleveland, OH (Graduated: August 2012 )`);
+    li[35].append(`University of Jordan Bachelor’s Degree, Amman, Jordan (Graduated: June 2010)`);
+    ul[8].append(li[33]);
+    ul[8].append(li[34]);
+    ul[8].append(li[35]);
+    position[8].append(h3[8]);
+    position[8].append(ul[8]);
+
 
     // Append paragraphs to container here.
     for (i in position) {
