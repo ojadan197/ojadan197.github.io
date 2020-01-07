@@ -502,8 +502,8 @@ function populate_tabs() {
       bold_underline[i].append(bold[i]);
       image[i] = document.createElement('img');
       extra_image[i] = document.createElement('img');
-      image[i].setAttribute('src', 'css/images/image['+i+'].JPG');
-      extra_image[i].setAttribute('src', 'css/images/extra_image['+i+'].JPG');
+      image[i].setAttribute('src', 'css/images/project_pics/image['+i+'].JPG');
+      extra_image[i].setAttribute('src', 'css/images/project_pics/extra_image['+i+'].JPG');
       image[i].classList.add('project_image');
       extra_image[i].classList.add('project_image');
       h4[i] = document.createElement('h3');
