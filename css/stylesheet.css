@@ -26,10 +26,28 @@
 
 
 .my_image {
+    width: 45%;
     max-width: 250px;
     max-height: 250px;
     float: right;
 }
+
+.project_image{
+    /* justify-content: center; */
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    width: 75%;
+    max-width: 750px;
+    max-height: 656px;
+    border: solid .2rem;
+    border-color: black;
+    border-radius: 1rem;
+    
+}
+
 .image {
     width: 100px;
     height: 100px;

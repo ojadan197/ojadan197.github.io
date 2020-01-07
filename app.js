@@ -35,8 +35,6 @@ tab_6.id = 'tab_6';
 let message_p = `Main Menu`;
 document.getElementById("display_message").innerHTML = `${message_p}`;
 
-let go_back = ``;
-document.getElementById("go_back").innerHTML = `${go_back}`;
 
 // Environment Manipulation Here
 
@@ -50,13 +48,10 @@ tab_5.onclick = clickTab5;
 tab_6.onclick = clickTab6;
 
 
-
 function clickTab1 () {
   console.log("tab 1 clicked");
   message_p = `About Me`;
   document.getElementById("display_message").innerHTML = `${message_p}`;
-  // go_back = `Click the Glowbox to Return Home`;
-  document.getElementById("go_back").innerHTML = `${go_back}`;
   popTab6();
   tab_6.append(content_1());
 }
@@ -65,8 +60,6 @@ function clickTab2 () {
   console.log("tab 2 clicked");
   message_p = `Future Goals`;
   document.getElementById("display_message").innerHTML = `${message_p}`;
-  // go_back = `Click the Glowbox to Return Home`;
-  document.getElementById("go_back").innerHTML = `${go_back}`;
   popTab6();
   tab_6.append(content_2());
 }
@@ -75,18 +68,15 @@ function clickTab3 () {
   console.log("tab 3 clicked");
   message_p = `Past Experience`;
   document.getElementById("display_message").innerHTML = `${message_p}`;
-  // go_back = `Click the Glowbox to Return Home`;
-  document.getElementById("go_back").innerHTML = `${go_back}`;
+
   popTab6();
   tab_6.append(content_3());
 }
 
 function clickTab4 () {
   console.log("tab 4 clicked");
-  message_p = `Katas and Treasures`;
+  message_p = `Katas and <br>Treasures`;
   document.getElementById("display_message").innerHTML = `${message_p}`;
-  // go_back = `Click the Glowbox to Return Home`;
-  document.getElementById("go_back").innerHTML = `${go_back}`;
   popTab6();
   tab_6.append(content_4());
 }
@@ -95,8 +85,6 @@ function clickTab5 () {
   console.log("tab 5 clicked");
   message_p = `Past Projects`;
   document.getElementById("display_message").innerHTML = `${message_p}`;
-  // go_back = `Click the Glowbox to Return Home`;
-  document.getElementById("go_back").innerHTML = `${go_back}`;
   popTab6();
   tab_6.append(content_5());
 }
@@ -106,8 +94,6 @@ function clickTab6 () {
   document.getElementById("menu_tabs").innerHTML = "";
   message_p = `Main Menu`;
   document.getElementById("display_message").innerHTML = `${message_p}`;
-  go_back = ``;
-  document.getElementById("go_back").innerHTML = `${go_back}`;
   populate_tabs();
     
 }
@@ -282,7 +268,6 @@ function populate_tabs() {
       underline[i] = document.createElement('u');
       bold_underline[i] = document.createElement('a');
       bold_underline[i].append(bold[i]);
-      
       italics[i] = document.createElement('i');
       h3[i] = document.createElement('h3');
       ul[i] = document.createElement('ul');
@@ -497,22 +482,61 @@ function populate_tabs() {
   // Sample Projects
   function content_5 () {
     const SampleProjects = document.createElement('div');
+    const position = [];
+    const bold = [];
+    const underline = [];
+    const bold_underline = [];
+    const image = [];
+    const extra_image = []
+    const h4 = [];
+    const ul = [];
+    const li = [];
     const paragraph = [];
-    
-    // Determine the number of paragraphs in this section here
-    for (i = 0; i <3; i++){
+
+    // Creating objects to hold positions  here
+    for (i = 0; i <2; i++){
+      position[i] = document.createElement('div');
+      bold[i] = document.createElement('b');
+      underline[i] = document.createElement('u');
+      bold_underline[i] = document.createElement('a');
+      bold_underline[i].append(bold[i]);
+      image[i] = document.createElement('img');
+      extra_image[i] = document.createElement('img');
+      image[i].setAttribute('src', 'css/images/image['+i+'].JPG');
+      extra_image[i].setAttribute('src', 'css/images/extra_image['+i+'].JPG');
+      image[i].classList.add('project_image');
+      extra_image[i].classList.add('project_image');
+      h4[i] = document.createElement('h3');
+      ul[i] = document.createElement('ul');
+      li[i] = document.createElement('li');
       paragraph[i] = document.createElement('p');
     }
 
     // Mannually Populate Paragraph content here...
-    paragraph[0].append(`This Paragraph 1 of the Sample Projects section, currently under construction`)
-    paragraph[1].append('Paragraph 2 is way better than paragraph 1 I could repeat it twice')
-    paragraph[2].append('But Paragraph 3 is the best parargraph of all!!!!!!!')
+    h4[0].append(`Bring It!`);
+    // h4[1].append(`Crypt of Death Metal`);
+    h4[1].append(`Black Jack: AWSM`);
+    // image[2].setAttribute('src', 'css/images/black-jack-1.JPG');
+    // extra_image[2].setAttribute('src', 'css/images/black-jack-2.JPG');
+
+    paragraph[0].append(`The ultimate party planner! Bring It! lets you create and manage what you need for your party to be a blast. Make items and assign them to an attendee, all in one place! No more scrolling the comments section. It\'s your party and they can bring want they want too. Users can assign themselves unclaimed items or create their own self-assigned item. Never again will you have competing potato salads in your future parties because everything will be brought! `);
+    paragraph[1].append(`My dear friends, Black Jack doesn\'t get any more A.W.S.M. than this! Redifining awesomeness is the Rambo Unicorn in top-right corner, as well as a fully functioning, single-player game of Black Jack! Although there is a version of Black Jack coming my Katas and Treasures section, A.W.S.M. is reserved for those who are keenly interested and ask nicely!`);
     
-    // Append paragraphs to container here.
-    for (i in paragraph) {
-      SampleProjects.append(paragraph[i]);  
+  
+
+
+    for (i = 0; i <2; i++){
+      // li[i].append(h4[i])
+      // ul[i].append(li[i]);
+      underline[i].append(h4[i]);
+      bold_underline[i].append(underline[i]);
+      // position[i].append(bold_underline[i]);
+      SampleProjects.append(bold_underline[i]);
+      SampleProjects.append(paragraph[i]);
+      SampleProjects.append(image[i]);
+      SampleProjects.append(extra_image[i]);
     }
+    
 
     return SampleProjects;
   }
