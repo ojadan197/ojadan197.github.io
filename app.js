@@ -514,10 +514,10 @@ function populate_tabs() {
 
     // Mannually Populate Paragraph content here...
     h4[0].append(`Bring It!`);
-    h4[1].append(`Black Jack: AWSM`);
+    h4[1].append(`Black Jack: A.W.S.M.`);
 
     paragraph[0].append(`The ultimate party planner! Bring It! lets you create and manage what you need for your party to be a blast. Make items and assign them to an attendee, all in one place! No more scrolling the comments section. It\'s your party and they can bring want they want too. Users can assign themselves unclaimed items or create their own self-assigned item. Never again will you have competing potato salads in your future parties because everything will be brought! `);
-    paragraph[1].append(`My dear friends, Black Jack doesn\'t get any more A.W.S.M. than this! Redifining awesomeness is the Rambo Unicorn in top-right corner, as well as a fully functioning, single-player game of Black Jack! Although there is a version of Black Jack coming my Katas and Treasures section, A.W.S.M. is reserved for those who are keenly interested and ask nicely!`);
+    paragraph[1].append(`My dear friends, Black Jack doesn\'t get any more A.W.S.M. than this! Redefining awesomeness is the Rambo Unicorn in top-right corner, as well as a fully functioning, single-player game of Black Jack! Although there is a version of Black Jack coming my Katas and Treasures section, A.W.S.M. is reserved for those who are keenly interested and ask nicely!`);
     
   
 
